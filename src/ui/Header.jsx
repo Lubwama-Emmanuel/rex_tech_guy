@@ -1,9 +1,18 @@
 export default function Header() {
   return (
-    <div>
-      <div className="hover:drop-shadow-[0_0_2em_rgba(100, 108, 255, 0.667)] w-20 bg-red-700 text-3xl">
-        <h2>rex</h2>
+    <header className="flex items-center justify-between gap-[20%] px-5 py-2">
+      <div className="text-center">
+        <h2 className="text-3xl font-semibold text-red-500">shop with rex</h2>
+        <p className="text-sm italic">the tech guy</p>
       </div>
-    </div>
+      <ul className="flex flex-grow justify-between text-xl">
+        <li>products</li>
+        <li>services</li>
+        <li>contact</li>
+      </ul>
+      <div>
+        <button className="bg-red-500 px-2 py-1 text-xl font-bold">shop</button>
+      </div>
+    </header>
   );
 }
