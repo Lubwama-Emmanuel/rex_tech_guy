@@ -39,7 +39,10 @@ export default function Slider({ laptop }) {
             {make}
           </h2>
           <h3 className="text-2xl">{tagline}</h3>
-          <Button>learn more</Button>
+          <div className="space-x-5">
+            <Button>learn more</Button>
+            <Button>shop</Button>
+          </div>
         </div>
         <div className="flex items-center justify-center">
           <img src={photo} className="w-3/4" />
@@ -51,8 +54,8 @@ export default function Slider({ laptop }) {
             key={index}
             className={
               index === selected
-                ? `h-5 w-12 bg-emerald-800`
-                : `h-5 w-5 bg-emerald-800`
+                ? `h-2 w-12 bg-emerald-800`
+                : `h-2 w-5 bg-emerald-800`
             }
             onClick={() => setSelected(index)}
           ></div>

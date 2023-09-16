@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "./Button";
 import Links from "./Links";
+import Logo from "./Logo";
 
 export default function Header() {
   const [isSearch, setisSearch] = useState(false);
@@ -12,9 +13,7 @@ export default function Header() {
   return (
     <header className="m-auto flex max-w-[95%] items-center justify-between py-2">
       <div className="text-center">
-        <h2 className=" font-logo bg-gradient-to-r from-emerald-600 to-emerald-800 bg-clip-text text-3xl font-semibold text-transparent ">
-          shop with rex
-        </h2>
+        <Logo />
       </div>
       <Links />
       <div className="flex w-auto items-center space-x-5">
