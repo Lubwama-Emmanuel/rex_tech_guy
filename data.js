@@ -10,7 +10,7 @@ const data = [
     id: 1,
     name: "victus 16 gaming laptop ",
     make: "(2023 intel)",
-    tagline: "Unlock you true gaming potential",
+    tagline: "Unlock your true gaming potential",
     photo: "/images/victus-16.png",
   },
   {
