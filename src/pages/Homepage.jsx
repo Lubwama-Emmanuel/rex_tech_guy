@@ -6,6 +6,7 @@ export default function Homepage() {
     <div>
       <Hero />
       <Brands />
+      {/* <Inspiration /> */}
     </div>
   );
 }
