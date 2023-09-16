@@ -1,7 +1,9 @@
+import { useState } from "react";
 import Button from "./Button";
 import Logo from "./Logo";
 
 export default function Footer() {
+  const [showForm, setShowForm] = useState(false);
   const clipPathValues = {
     sec1: "0 0, 100% 0, 80% 100%, 0% 100%",
     sec2: "0 0, 80% 0, 100% 100%, 0 100%",
@@ -14,7 +16,7 @@ export default function Footer() {
         }}
         className="h-[50%] w-[100%] bg-white "
       >
-        <div className=" m-auto grid w-[95%] grid-cols-[2fr_4fr]">
+        <div className=" m-auto grid w-[95%] grid-cols-[2fr_4fr] py-5">
           <div>
             <Logo />
             <div className="mt-5">
@@ -39,34 +41,56 @@ export default function Footer() {
             </div>
           </div>
           <div className="space-y-3">
-            <h3 className="text-2xl">Have an Inquiry ?</h3>
-            <form className="flex flex-col space-y-3">
-              <div className="space-x-2">
-                <label className="capitalize">name</label>
+            <div className="flex space-x-5">
+              <h3 className="text-2xl">Have an Inquiry ?</h3>
+              <button
+                className=" rounded-full border border-emerald-400 px-4 pb-1 pt-2 text-xl font-bold uppercase leading-none text-emerald-800 "
+                onClick={() => setShowForm((value) => !value)}
+              >
+                {showForm ? `close form` : `open form`}
+              </button>
+            </div>
+
+            {showForm ? (
+              <div className="space-y-3">
+                <form className="flex flex-col space-y-3">
+                  <div className="space-x-2">
+                    <label className="capitalize">name</label>
+                    <input
+                      type="type"
+                      placeholder="Enter Name"
+                      className="w-[70%] rounded-full border border-emerald-400 px-2 "
+                    />
+                  </div>
+                  <div className="space-x-2">
+                    <label className="capitalize">phone</label>
+                    <input
+                      type="type"
+                      placeholder="Enter Phone"
+                      className="w-[70%] rounded-full border border-emerald-400 px-2 "
+                    />
+                  </div>
+                  <div className="flex space-x-2">
+                    <label className="capitalize">inquiry</label>
+                    <input
+                      type="type"
+                      placeholder="State Inqury"
+                      className="h-24 w-[70%] rounded-lg border border-emerald-400 px-2"
+                    />
+                  </div>
+                </form>
+                <Button>inquiry</Button>
+              </div>
+            ) : (
+              <div>
+                <h3 className="text-2xl">Subscribe to our newsLetter</h3>
                 <input
-                  type="type"
-                  placeholder="Enter Name"
-                  className="w-[70%] rounded-full border border-emerald-400 px-2 "
+                  type="email"
+                  placeholder="Enter email"
+                  className="w-[70%] rounded-full border border-emerald-400 px-2 py-2 focus:outline-none focus:ring focus:ring-emerald-600 focus:ring-offset-2 "
                 />
               </div>
-              <div className="space-x-2">
-                <label className="capitalize">phone</label>
-                <input
-                  type="type"
-                  placeholder="Enter Phone"
-                  className="w-[70%] rounded-full border border-emerald-400 px-2 "
-                />
-              </div>
-              <div className="flex space-x-2">
-                <label className="capitalize">inquiry</label>
-                <input
-                  type="type"
-                  placeholder="State Inqury"
-                  className="h-24 w-[70%] rounded-lg border border-emerald-400 px-2"
-                />
-              </div>
-            </form>
-            <Button>inquiry</Button>
+            )}
           </div>
         </div>
       </div>
@@ -74,7 +98,7 @@ export default function Footer() {
         style={{
           clipPath: `polygon(${clipPathValues.sec2})`,
         }}
-        className="relative  h-[50%] w-[100%] bg-white"
+        className="relative h-[50%] w-[100%] bg-white"
       >
         <div className="m-auto grid w-[95%] grid-cols-3 py-10">
           <div>

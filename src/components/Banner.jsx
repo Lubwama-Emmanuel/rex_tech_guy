@@ -7,7 +7,7 @@ export default function Banner() {
   };
 
   return (
-    <section className="relative h-[1300px] bg-gradient-to-b from-emerald-400 to-emerald-900">
+    <section className="relative mb-16 h-[1300px] bg-gradient-to-b from-emerald-400 to-emerald-900">
       <div
         style={{
           clipPath: `polygon(${clipPathValues.sec1})`,

@@ -54,8 +54,8 @@ export default function Slider({ laptop }) {
             key={index}
             className={
               index === selected
-                ? `h-2 w-12 bg-emerald-800`
-                : `h-2 w-5 bg-emerald-800`
+                ? `h-2 w-12 rounded-lg bg-emerald-800 `
+                : `h-2 w-5 rounded-lg border border-emerald-800 `
             }
             onClick={() => setSelected(index)}
           ></div>

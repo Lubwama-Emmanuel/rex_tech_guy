@@ -4,13 +4,19 @@ export default function Links() {
   return (
     <ul className="flex justify-between space-x-12 text-xl uppercase">
       <li>
-        <NavLink to="/products">products</NavLink>
+        <NavLink to="/products" className="focus:text-emerald-500">
+          products
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/services">services</NavLink>
+        <NavLink to="/services" className="focus:text-emerald-500">
+          services
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/contact">contact</NavLink>
+        <NavLink to="/contact" className="focus:text-emerald-500">
+          contact
+        </NavLink>
       </li>
     </ul>
   );
