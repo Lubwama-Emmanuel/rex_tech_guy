@@ -42,7 +42,7 @@ export default function ProductOverview() {
           {data.map((laptop) => (
             <div
               onMouseEnter={() => handleMouseEnter(laptop.image)}
-              className="hover:bg-red-600"
+              className="rounded-md hover:bg-gradient-to-r hover:from-emerald-600 hover:to-emerald-800"
               key={laptop.id}
             >
               <img src={laptop.image} className="w-32" />
