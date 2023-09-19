@@ -5,6 +5,7 @@ import Contact from "./pages/Contact";
 import Products from "./pages/Products";
 import AppLayout from "./ui/AppLayout";
 import GamingLaptops from "./pages/GamingLaptops";
+import ProductPage from "./pages/ProductPage";
 
 export default function App() {
   // const [isDark, setIsDark] = useState(false);
@@ -32,6 +33,10 @@ export default function App() {
         {
           path: "/contact",
           element: <Contact />,
+        },
+        {
+          path: "/products/gaming/omen",
+          element: <ProductPage />,
         },
       ],
     },
