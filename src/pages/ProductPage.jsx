@@ -1,8 +1,9 @@
-export default function ProductPage() {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+import ProductOverview from "../components/ProductOverview";
 
+export default function ProductPage() {
+  return (
+    <div>
+      <ProductOverview />
+    </div>
+  );
+}
