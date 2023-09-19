@@ -84,6 +84,8 @@ const linkItems = [
   },
 ];
 
+// 0704718148
+
 export default function Links() {
   const [showDropdown, setShowDropdown] = useState(false);
 
@@ -119,14 +121,17 @@ function Link({ el, showDropdown, handleHideDropdown, handleShowDropdown }) {
             to={el.link}
             onMouseEnter={() => handleShowDropdown()}
             onMouseLeave={() => handleHideDropdown()}
-            className="focus:text-emerald-500"
+            className="hover:text-emerald-500 focus:text-emerald-500"
           >
             {el.item}
           </NavLink>
           {showDropdown && <DropDown items={el.subMenu} />}
         </>
       ) : (
-        <NavLink to={el.link} className="focus:text-emerald-500">
+        <NavLink
+          to={el.link}
+          className="hover:text-emerald-500 focus:text-emerald-500"
+        >
           {el.item}
         </NavLink>
       )}
