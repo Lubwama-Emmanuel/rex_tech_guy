@@ -1,4 +1,6 @@
+/* eslint-disable no-irregular-whitespace */
 import { useState } from "react";
+import Button from "../ui/Button";
 
 const data = [
   {
@@ -21,11 +23,6 @@ const data = [
     name: "omen 16 gaming laptop (2023 intel",
     image: "/images/omen-intel.png",
   },
-  {
-    id: 4,
-    name: "omen 16 gaming laptop (2022 amd)",
-    image: "/images/omen-16.png",
-  },
 ];
 
 export default function ProductOverview() {
@@ -35,19 +32,36 @@ export default function ProductOverview() {
     setActiveImage(newImage);
   }
   return (
-    <div>
-      <div className="w-96">
-        <img src={activeImage} className="w-96" />
-        <div className="grid grid-cols-[repeat(auto-fit,_minmax(120px,_1fr))]">
+    <div className="mx-auto my-10 grid w-[90%] grid-cols-[1fr_2fr] items-center gap-10">
+      <div className="">
+        <img src={activeImage} className="w-80" />
+        <div className="grid w-[90%] grid-cols-[repeat(auto-fit,_minmax(120px,_1fr))]">
           {data.map((laptop) => (
             <div
               onMouseEnter={() => handleMouseEnter(laptop.image)}
-              className="rounded-md hover:bg-gradient-to-r hover:from-emerald-600 hover:to-emerald-800"
+              className="flex justify-center rounded-md hover:bg-gradient-to-r hover:from-emerald-600 hover:to-emerald-800"
               key={laptop.id}
             >
-              <img src={laptop.image} className="w-32" />
+              <img src={laptop.image} className="w-20" />
             </div>
           ))}
+        </div>
+      </div>
+      <div className="space-y-3">
+        <h2 className="text-3xl font-bold capitalize">omen 17 gaming laptop</h2>
+        <h3 className="text-2xl font-medium capitalize">details:</h3>
+        <p className="text-xl">
+          Up to Intel® Core™ i9-11900HX (up to 5.4 GHz with Intel® Turbo
+          Boost Technology(2g), 36 MB L3 cache, 24 cores, 32 threads)​ Up to
+          NVIDIA® GeForce RTX™ 3080 Laptop GPU (16 GB GDDR6 dedicated) powered
+          by NVIDIA DLSS 3, ultra-efficient Ada Lovelace architecture, and Max-Q
+          Technologies.​ Up to 32 GB DDR5-5600 MHz RAM (2 x 16 GB)​ Up to 1 TB
+          PCIe® Gen4 NVMe™ TLC M.2 SSD
+        </p>
+        <h3 className="text-xl ">Ugx 3,000,000</h3>
+        <div className="space-x-3">
+          <Button>add to cart</Button>
+          <Button>shop</Button>
         </div>
       </div>
     </div>
