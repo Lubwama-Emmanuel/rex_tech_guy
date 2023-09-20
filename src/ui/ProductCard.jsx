@@ -1,5 +1,3 @@
-import { NavLink } from "react-router-dom";
-
 /* eslint-disable react/prop-types */
 export default function ProductCard({ laptop }) {
   const { name, image } = laptop;
@@ -7,7 +5,7 @@ export default function ProductCard({ laptop }) {
   return (
     <div
       className="flex flex-col items-center hover:scale-110"
-      onClick={() => <NavLink to="/products/gaming/omen" />}
+      onClick={() => console.log("clicked")}
     >
       <img src={image} className="w-64" />
       <h3 className="uppercase">{name}</h3>
