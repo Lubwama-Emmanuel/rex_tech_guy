@@ -27,19 +27,26 @@ const data = [
 
 export default function ProductOverview() {
   const [activeImage, setActiveImage] = useState(data[0].image);
+  const [activeContainer, setActiveContainer] = useState(0);
 
-  function handleMouseEnter(newImage) {
+  function handleMouseEnter(newImage, index) {
+    setActiveContainer(index);
     setActiveImage(newImage);
   }
+
   return (
     <div className="mx-auto my-10 grid w-[90%] grid-cols-[1fr_2fr] items-center gap-10">
       <div className="">
         <img src={activeImage} className="w-80" />
         <div className="grid w-[90%] grid-cols-[repeat(auto-fit,_minmax(120px,_1fr))]">
-          {data.map((laptop) => (
+          {data.map((laptop, index) => (
             <div
-              onMouseEnter={() => handleMouseEnter(laptop.image)}
-              className="flex justify-center rounded-md hover:bg-gradient-to-r hover:from-emerald-600 hover:to-emerald-800"
+              onMouseEnter={() => handleMouseEnter(laptop.image, index)}
+              className={
+                activeContainer === index
+                  ? `flex justify-center rounded-md bg-gradient-to-r from-emerald-600 to-emerald-800 hover:bg-gradient-to-r hover:from-emerald-600 hover:to-emerald-800`
+                  : `flex justify-center rounded-md  hover:bg-gradient-to-r hover:from-emerald-600 hover:to-emerald-800`
+              }
               key={laptop.id}
             >
               <img src={laptop.image} className="w-20" />
