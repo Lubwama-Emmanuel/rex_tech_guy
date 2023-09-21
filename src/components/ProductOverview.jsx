@@ -34,6 +34,8 @@ export default function ProductOverview() {
     setActiveImage(newImage);
   }
 
+  const unsued = 90;
+
   return (
     <div className="mx-auto my-10 grid w-[90%] grid-cols-[1fr_2fr] items-center gap-10">
       <div className="">
