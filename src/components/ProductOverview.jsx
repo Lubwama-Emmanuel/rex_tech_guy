@@ -1,5 +1,5 @@
 /* eslint-disable no-irregular-whitespace */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../ui/Button";
 
 const data = [
@@ -29,13 +29,29 @@ export default function ProductOverview() {
   const [activeImage, setActiveImage] = useState(data[0].image);
   const [activeContainer, setActiveContainer] = useState(0);
 
+  function moveContainer() {
+    if (activeContainer === 3) {
+      setActiveContainer(0);
+    } else {
+      setActiveContainer((value) => value + 1);
+    }
+  }
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      moveContainer();
+    }, 2000);
+
+    return () => clearInterval(interval);
+  });
+
   function handleMouseEnter(newImage, index) {
     setActiveContainer(index);
     setActiveImage(newImage);
   }
 
   return (
-    <div className="mx-auto my-10 grid w-[90%] grid-cols-[1fr_2fr] items-center gap-10">
+    <div className="mx-auto mb-10 mt-20 grid max-w-[97%] items-center gap-10 sm:max-w-[90%] sm:grid-cols-[1fr_2fr]">
       <div className="">
         <img src={activeImage} className="w-80" />
         <div className="grid w-[90%] grid-cols-[repeat(auto-fit,_minmax(120px,_1fr))]">
