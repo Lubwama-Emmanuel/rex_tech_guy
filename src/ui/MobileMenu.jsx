@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import Links from "./Links";
 
 export default function MobileMenu() {
