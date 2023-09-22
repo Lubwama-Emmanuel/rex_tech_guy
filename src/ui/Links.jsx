@@ -84,9 +84,7 @@ const linkItems = [
   },
 ];
 
-// 0704718148
-
-export default function Links() {
+export default function Links({ styles }) {
   const [showDropdown, setShowDropdown] = useState(false);
 
   function handleShowDropdown() {
@@ -98,7 +96,7 @@ export default function Links() {
   }
 
   return (
-    <ul className="flex justify-between space-x-12 text-xl uppercase">
+    <ul className={styles}>
       {linkItems.map((el) => (
         <Link
           key={el.id}
