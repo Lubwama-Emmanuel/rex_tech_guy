@@ -11,11 +11,11 @@ export default function Header() {
   }
 
   return (
-    <header className="m-auto flex max-w-[95%] items-center justify-between py-2">
+    <header className="m-auto hidden max-w-[95%] items-center justify-between py-2 sm:flex">
       <div className="text-center">
         <Logo />
       </div>
-      <Links />
+      <Links styles={"flex justify-between space-x-12 text-xl uppercase"} />
       <div className="flex w-auto items-center space-x-5">
         {isSearch ? (
           <div className="flex items-center justify-between rounded-full border border-emerald-400 pr-3">
