@@ -27,24 +27,24 @@ export default function Slider({ laptop }) {
     return () => clearInterval(interval);
   });
   return (
-    <div className="m-auto max-w-[95%] ">
-      <div className="grid  grid-cols-2 py-10 ">
-        <div className="flex flex-col items-start justify-center space-y-3">
+    <div className="m-auto mt-10 max-w-[95%]">
+      <div className="grid py-5 sm:grid-cols-2 sm:py-10">
+        <div className=" order-last flex flex-col items-start justify-center space-y-2 px-5 py-2 sm:space-y-3 sm:px-1">
           <h3 className="text-sm font-light uppercase tracking-widest">
             new product
           </h3>
-          <h2 className="text-5xl uppercase">
+          <h2 className="text-xl uppercase sm:text-5xl">
             {name}
-            <br></br>
+            <br className="hidden sm:block"></br>
             {make}
           </h2>
-          <h3 className="text-2xl">{tagline}</h3>
-          <div className="space-x-5">
+          <h3 className="sm:text-2xl">{tagline}</h3>
+          <div className="space-x-5 ">
             <Button>learn more</Button>
             <Button>shop</Button>
           </div>
         </div>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center ">
           <img src={photo} className="w-3/4" />
         </div>
       </div>
@@ -54,8 +54,8 @@ export default function Slider({ laptop }) {
             key={index}
             className={
               index === selected
-                ? `h-2 w-12 rounded-lg bg-emerald-800 `
-                : `h-2 w-5 rounded-lg border border-emerald-800 `
+                ? `h-2 w-20 rounded-lg bg-emerald-800 sm:w-12`
+                : `h-2 w-7 rounded-lg border border-emerald-800 sm:w-5`
             }
             onClick={() => setSelected(index)}
           ></div>
