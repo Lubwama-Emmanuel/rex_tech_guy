@@ -4,6 +4,10 @@ import Logo from "./Logo";
 
 export default function Footer() {
   const [showForm, setShowForm] = useState(false);
+
+  function HandleShowForm() {
+    setShowForm((value) => !value);
+  }
   const clipPathValues = {
     sec1: "0 0, 100% 0, 80% 100%, 0% 100%",
     sec2: "0 0, 80% 0, 100% 100%, 0 100%",
@@ -43,12 +47,12 @@ export default function Footer() {
           <div className="space-y-3">
             <div className="flex space-x-5">
               <h3 className="text-2xl">Have an Inquiry ?</h3>
-              <button
+              <Button
                 className=" rounded-full border border-emerald-400 px-4 pb-1 pt-2 text-xl font-bold uppercase leading-none text-emerald-800 "
-                onClick={() => setShowForm((value) => !value)}
+                handleClick={HandleShowForm}
               >
                 {showForm ? `close form` : `open form`}
-              </button>
+              </Button>
             </div>
 
             {showForm ? (
