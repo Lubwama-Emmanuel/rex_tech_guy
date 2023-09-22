@@ -11,7 +11,7 @@ export default function Header() {
   }
 
   return (
-    <header className="fixed left-0 right-0 top-0 m-auto hidden max-w-[100%] items-center justify-between bg-white px-10 py-2 shadow-sm shadow-emerald-200/50 sm:flex">
+    <header className="fixed left-0 right-0 top-0 z-10 m-auto hidden max-w-[100%] items-center justify-between bg-white px-10 py-2 shadow-sm shadow-emerald-200/50 sm:flex">
       <div className="text-center">
         <Logo />
       </div>

@@ -2,25 +2,36 @@
 import { useState } from "react";
 import Logo from "./Logo";
 
-export default function MobileHeader({ setShowMenu }) {
+export default function MobileHeader({ showMenu, setShowMenu }) {
   const [isSearch, setisSearch] = useState(false);
+
+  console.log(showMenu);
 
   function HandleToggleSearch() {
     setisSearch((value) => !value);
   }
   return (
-    <header className="fixed left-0 right-0 top-0 space-y-3 bg-white px-2 py-3 shadow-sm shadow-emerald-200/50 sm:hidden">
+    <header className="fixed left-0 right-0 top-0 z-10 space-y-3 bg-white px-2 py-3 shadow-sm shadow-emerald-200/50 sm:hidden">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-2">
-          <div
-            className="space-y-1"
-            onClick={() => setShowMenu((value) => !value)}
-          >
-            <div className="h-1 w-8 bg-emerald-400"></div>
-            <div className="h-1 w-8 bg-emerald-500"></div>
-            <div className="h-1 w-8 bg-emerald-600"></div>
-            <div className="h-1 w-8 bg-emerald-700"></div>
-          </div>
+          {!showMenu ? (
+            <div
+              className="space-y-1"
+              onClick={() => setShowMenu((value) => !value)}
+            >
+              <div className="h-1 w-8 bg-emerald-400"></div>
+              <div className="h-1 w-8 bg-emerald-500"></div>
+              <div className="h-1 w-8 bg-emerald-600"></div>
+              <div className="h-1 w-8 bg-emerald-700"></div>
+            </div>
+          ) : (
+            <div
+              onClick={() => setShowMenu((value) => !value)}
+              className="text-3xl font-medium text-emerald-800"
+            >
+              <h2 className="">X</h2>
+            </div>
+          )}
           <Logo />
         </div>
         <div className="flex space-x-2">

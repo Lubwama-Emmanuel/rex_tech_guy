@@ -8,19 +8,24 @@ export default function Footer() {
   function HandleShowForm() {
     setShowForm((value) => !value);
   }
+  // const clipPathValues = {
+  //   sec1: "0 0, 100% 0, 80% 100%, 0% 100%",
+  //   sec2: "0 0, 80% 0, 100% 100%, 0 100%",
+  // };
+
   const clipPathValues = {
-    sec1: "0 0, 100% 0, 80% 100%, 0% 100%",
-    sec2: "0 0, 80% 0, 100% 100%, 0 100%",
+    sec1: "0 0, 100% 0, 100% 20%, 80% 100%, 0% 100%",
+    sec2: "0% 0, 80% 0, 100% 80%, 100% 100%, 0 100%",
   };
   return (
-    <footer className="mt-24 h-[95dvh] bg-gradient-to-b from-emerald-400 to-emerald-900">
+    <footer className=" h-[100vh] bg-gradient-to-b from-emerald-400 to-emerald-900">
       <div
         style={{
           clipPath: `polygon(${clipPathValues.sec1})`,
         }}
         className="h-[50%] w-[100%] bg-white "
       >
-        <div className=" m-auto grid w-[95%] grid-cols-[2fr_4fr] py-5">
+        <div className=" m-auto grid w-[95%] gap-10 py-7 sm:grid-cols-[2fr_4fr]">
           <div>
             <Logo />
             <div className="mt-5">
@@ -87,7 +92,9 @@ export default function Footer() {
               </div>
             ) : (
               <div>
-                <h3 className="text-2xl">Subscribe to our newsLetter</h3>
+                <h3 className="mb-3 text-2xl  sm:mb-2">
+                  Subscribe to our newsLetter
+                </h3>
                 <input
                   type="email"
                   placeholder="Enter email"
@@ -104,7 +111,7 @@ export default function Footer() {
         }}
         className="relative h-[50%] w-[100%] bg-white"
       >
-        <div className="m-auto grid w-[95%] grid-cols-3 py-10">
+        <div className="m-auto grid w-[95%] space-y-3 py-10 sm:grid-cols-3">
           <div>
             <h3 className="text-2xl">Search categories</h3>
             <ul>
@@ -149,7 +156,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-0 w-[100%] text-center text-xl uppercase">
+        <div className="absolute bottom-0 w-[100%] text-center uppercase sm:text-xl">
           <p>&copy; copyright {new Date().getFullYear()} rex the tech guy</p>
         </div>
       </div>

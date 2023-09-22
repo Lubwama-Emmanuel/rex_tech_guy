@@ -14,7 +14,7 @@ export default function AppLayout() {
 
       <Header setShowMenu={setShowMenu} />
 
-      <MobileHeader setShowMenu={setShowMenu} />
+      <MobileHeader showMenu={showMenu} setShowMenu={setShowMenu} />
 
       <main>
         <Outlet />
