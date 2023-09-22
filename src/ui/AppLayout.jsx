@@ -6,7 +6,7 @@ import MobileMenu from "./MobileMenu";
 import { useState } from "react";
 
 export default function AppLayout() {
-  const [showMenu, setShowMenu] = useState(true);
+  const [showMenu, setShowMenu] = useState(false);
 
   return (
     <div className="">
