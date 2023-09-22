@@ -9,7 +9,7 @@ export default function MobileHeader({ setShowMenu }) {
     setisSearch((value) => !value);
   }
   return (
-    <header className=" space-y-3 px-2 py-3 sm:hidden">
+    <header className="fixed left-0 right-0 top-0 space-y-3 bg-white px-2 py-3 sm:hidden">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <div
