@@ -6,6 +6,7 @@ import Products from "./pages/Products";
 import AppLayout from "./ui/AppLayout";
 import GamingLaptops from "./pages/GamingLaptops";
 import ProductPage from "./pages/ProductPage";
+import AllProductsPage from "./pages/AllProductsPage";
 
 export default function App() {
   // const [isDark, setIsDark] = useState(false);
@@ -37,6 +38,10 @@ export default function App() {
         {
           path: "/products/gaming/omen",
           element: <ProductPage />,
+        },
+        {
+          path: "/products/allProducts",
+          element: <AllProductsPage />,
         },
       ],
     },

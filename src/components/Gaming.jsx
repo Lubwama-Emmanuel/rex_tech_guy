@@ -32,7 +32,7 @@ const data = [
 export default function Gaming() {
   return (
     <section className="m-auto mb-20 w-[95%]">
-      <ComponentHead />
+      <ComponentHead title={"gaming"} link={"/products/gaming"} />
       <div className="grid grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))]">
         {data.map((el) => (
           <ProductCard key={el.id} laptop={el} />

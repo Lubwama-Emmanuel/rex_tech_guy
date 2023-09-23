@@ -181,7 +181,6 @@ const data = [
 export default function Products() {
   return (
     <section className="m-auto w-[98%]">
-      <h2 className="mb-10 text-3xl uppercase">gaming laptops</h2>
       <div className="grid grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))]">
         {data.map((laptop) => (
           <ProductCard key={laptop.id} laptop={laptop} />

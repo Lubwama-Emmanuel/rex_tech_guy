@@ -1,5 +1,7 @@
+import AllProducts from "../components/AllProducts";
 import Banner from "../components/Banner";
 import Brands from "../components/Brands";
+import Designers from "../components/Designers";
 import Gaming from "../components/Gaming";
 import Hero from "../components/Hero";
 
@@ -10,8 +12,8 @@ export default function Homepage() {
       <Brands />
       <Banner />
       <Gaming />
-      <Gaming />
-      <Gaming />
+      <Designers />
+      <AllProducts />
     </div>
   );
 }

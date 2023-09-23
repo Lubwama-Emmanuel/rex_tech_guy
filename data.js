@@ -3,7 +3,7 @@ const data = [
     id: 0,
     name: "hp omen gaming 16 laptop",
     make: " (2023 amd/nvidia)",
-    tagline: "Poweful fun anywhere",
+    tagline: "Powerful fun anywhere",
     photo: "/images/omen-16.png",
   },
   {
