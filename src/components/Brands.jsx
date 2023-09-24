@@ -15,6 +15,10 @@ export default function Brands() {
           src="/images/acer.png"
           className="w-20 transition-all duration-300 sm:w-24 sm:hover:scale-150"
         />
+        <img
+          src="/images/dell.png"
+          className="w-20 transition-all duration-300 sm:w-24 sm:hover:scale-150"
+        />
       </div>
     </section>
   );
