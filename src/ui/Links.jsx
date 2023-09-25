@@ -10,75 +10,33 @@ const linkItems = [
     subMenu: [
       {
         id: 0,
-        item: "gaming",
-        link: "/gaming",
+        item: "Dell",
+        link: "/products/dell",
       },
       {
-        id: 0,
-        item: "gaming",
-        link: "/gaming",
+        id: 1,
+        item: "hp",
+        link: "/products/hp",
       },
       {
-        id: 0,
+        id: 2,
         item: "gaming",
-        link: "/gaming",
+        link: "/products/gaming",
       },
       {
-        id: 0,
-        item: "gaming",
-        link: "/gaming",
-      },
-      {
-        id: 0,
-        item: "gaming",
-        link: "/gaming",
-      },
-      {
-        id: 0,
-        item: "gaming",
-        link: "/gaming",
+        id: 3,
+        item: "all products",
+        link: "/products/allProducts",
       },
     ],
   },
   {
-    id: 0,
+    id: 1,
     item: "services",
     link: "/services",
-    subMenu: [
-      {
-        id: 0,
-        item: "gaming",
-        link: "/gaming",
-      },
-      {
-        id: 0,
-        item: "gaming",
-        link: "/gaming",
-      },
-      {
-        id: 0,
-        item: "gaming",
-        link: "/gaming",
-      },
-      {
-        id: 0,
-        item: "gaming",
-        link: "/gaming",
-      },
-      {
-        id: 0,
-        item: "gaming",
-        link: "/gaming",
-      },
-      {
-        id: 0,
-        item: "gaming",
-        link: "/gaming",
-      },
-    ],
   },
   {
-    id: 0,
+    id: 2,
     item: "contact",
     link: "/contact",
   },
@@ -139,14 +97,16 @@ function Link({ el, showDropdown, handleHideDropdown, handleShowDropdown }) {
 
 function DropDown({ items }) {
   return (
-    <ul className="absolute">
-      {items.map((el) => (
-        <li key={el.id}>
-          <NavLink to={el.link} className="focus:text-emerald-500">
-            {el.item}
-          </NavLink>
-        </li>
-      ))}
-    </ul>
+    <div>
+      <ul className="absolute bg-white">
+        {items.map((el) => (
+          <li key={el.id}>
+            <NavLink to={el.link} className="focus:text-emerald-500">
+              {el.item}
+            </NavLink>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

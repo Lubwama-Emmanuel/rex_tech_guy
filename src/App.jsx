@@ -2,11 +2,13 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
-import Products from "./pages/Products";
 import AppLayout from "./ui/AppLayout";
 import GamingLaptops from "./pages/GamingLaptops";
 import ProductPage from "./pages/ProductPage";
 import AllProductsPage from "./pages/AllProductsPage";
+import DellLaptops from "./pages/DellLaptops";
+import HpLaptops from "./pages/HpLaptops";
+import LenovoLaptops from "./pages/LenovoLaptops";
 
 export default function App() {
   // const [isDark, setIsDark] = useState(false);
@@ -20,12 +22,20 @@ export default function App() {
           element: <Homepage />,
         },
         {
-          path: "/products",
-          element: <Products />,
-        },
-        {
           path: "/products/gaming",
           element: <GamingLaptops />,
+        },
+        {
+          path: "/products/dell",
+          element: <DellLaptops />,
+        },
+        {
+          path: "/products/hp",
+          element: <HpLaptops />,
+        },
+        {
+          path: "/products/lenovo",
+          element: <LenovoLaptops />,
         },
         {
           path: "/services",
