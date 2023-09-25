@@ -13,7 +13,7 @@ export default function ProductCard({ laptop, larger = false }) {
       }
       onClick={() => console.log("clicked")}
     >
-      <img src={image} className="w-64" />
+      <img src={image} className="w-32 sm:w-64" />
       <div>
         <h3 className="sm:text-md text-center text-sm uppercase">{name}</h3>
         <h3 className="text-sm">Ugx 3,000,000</h3>
