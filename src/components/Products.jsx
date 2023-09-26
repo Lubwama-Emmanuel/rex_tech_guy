@@ -27,6 +27,126 @@ const data = [
     image: "/images/omen-intel.png",
     brand: "acer",
   },
+  {
+    id: 0,
+    name: "hp omen 16 (2022 amd)",
+    image: "/images/omen-22.png",
+    brand: "lenovo",
+  },
+  {
+    id: 1,
+    name: "victus 16 gaming laptop (2023 intel)",
+    image: "/images/victus-16.png",
+    brand: "hp",
+  },
+  {
+    id: 2,
+    name: "omen transcend 16 gaming laptop",
+    image: "/images/omen-transcend.png",
+    brand: "dell",
+  },
+  {
+    id: 3,
+    name: "omen 16 gaming laptop (2023 intel",
+    image: "/images/omen-intel.png",
+    brand: "acer",
+  },
+  {
+    id: 0,
+    name: "hp omen 16 (2022 amd)",
+    image: "/images/omen-22.png",
+    brand: "lenovo",
+  },
+  {
+    id: 1,
+    name: "victus 16 gaming laptop (2023 intel)",
+    image: "/images/victus-16.png",
+    brand: "hp",
+  },
+  {
+    id: 2,
+    name: "omen transcend 16 gaming laptop",
+    image: "/images/omen-transcend.png",
+    brand: "dell",
+  },
+  {
+    id: 3,
+    name: "omen 16 gaming laptop (2023 intel",
+    image: "/images/omen-intel.png",
+    brand: "acer",
+  },
+  {
+    id: 0,
+    name: "hp omen 16 (2022 amd)",
+    image: "/images/omen-22.png",
+    brand: "lenovo",
+  },
+  {
+    id: 1,
+    name: "victus 16 gaming laptop (2023 intel)",
+    image: "/images/victus-16.png",
+    brand: "hp",
+  },
+  {
+    id: 2,
+    name: "omen transcend 16 gaming laptop",
+    image: "/images/omen-transcend.png",
+    brand: "dell",
+  },
+  {
+    id: 3,
+    name: "omen 16 gaming laptop (2023 intel",
+    image: "/images/omen-intel.png",
+    brand: "acer",
+  },
+  {
+    id: 0,
+    name: "hp omen 16 (2022 amd)",
+    image: "/images/omen-22.png",
+    brand: "lenovo",
+  },
+  {
+    id: 1,
+    name: "victus 16 gaming laptop (2023 intel)",
+    image: "/images/victus-16.png",
+    brand: "hp",
+  },
+  {
+    id: 2,
+    name: "omen transcend 16 gaming laptop",
+    image: "/images/omen-transcend.png",
+    brand: "dell",
+  },
+  {
+    id: 3,
+    name: "omen 16 gaming laptop (2023 intel",
+    image: "/images/omen-intel.png",
+    brand: "acer",
+  },
+  {
+    id: 0,
+    name: "hp omen 16 (2022 amd)",
+    image: "/images/omen-22.png",
+    brand: "lenovo",
+  },
+  {
+    id: 1,
+    name: "victus 16 gaming laptop (2023 intel)",
+    image: "/images/victus-16.png",
+    brand: "hp",
+  },
+  {
+    id: 2,
+    name: "omen transcend 16 gaming laptop",
+    image: "/images/omen-transcend.png",
+    brand: "dell",
+  },
+  {
+    id: 3,
+    name: "omen 16 gaming laptop (2023 intel",
+    image: "/images/omen-intel.png",
+    brand: "acer",
+  },
 ];
 
 export default function Products({ filter = "all products" }) {
@@ -70,7 +190,7 @@ export default function Products({ filter = "all products" }) {
         }
       >
         {filteredData.map((laptop) => (
-          <ProductCard key={laptop.id} laptop={laptop} larger={!isGrid} />
+          <ProductCard key={Math.random()} laptop={laptop} larger={!isGrid} />
         ))}
       </div>
     </section>
