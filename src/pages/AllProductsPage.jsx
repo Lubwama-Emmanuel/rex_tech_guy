@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { useEffect, useState } from "react";
 import Hero from "../components/Hero";
 import ProductsSection from "../ui/ProductsSection";
 
@@ -46,28 +47,28 @@ const filters = [
 ];
 
 export default function AllProductsPage() {
-  // const [isFilterToTop, setIsFilterToTop] = useState(false);
+  const [isFilterToTop, setIsFilterToTop] = useState(false);
 
-  // useEffect(() => {
-  //   // Function to be handling scrolling event
-  //   const handleScroll = () => {
-  //     const scrollY = window.scrollY;
+  useEffect(() => {
+    // Function to be handling scrolling event
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
 
-  //     if (scrollY === 400) {
-  //       setIsFilterToTop(true);
-  //     } else if (scrollY < 400) {
-  //       setIsFilterToTop(false);
-  //     }
-  //   };
+      if (scrollY >= 400) {
+        setIsFilterToTop(true);
+      } else {
+        setIsFilterToTop(false);
+      }
+    };
 
-  //   // Adding acroll event listener
-  //   window.addEventListener("scroll", handleScroll);
+    // Adding acroll event listener
+    window.addEventListener("scroll", handleScroll);
 
-  //   // Cleaning up th event lsitener when the component unmounts
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
+    // Cleaning up th event lsitener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <section>
@@ -75,7 +76,7 @@ export default function AllProductsPage() {
       <h2 className="mb-5 text-center text-5xl text-emerald-600">
         Which laptop is right for you?
       </h2>
-      <ProductsSection filters={filters} />
+      <ProductsSection filters={filters} isFilterToTop={isFilterToTop} />
     </section>
   );
 }
