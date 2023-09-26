@@ -3,13 +3,13 @@ import { useState } from "react";
 import FilterButton from "./FilterButton";
 import Products from "../components/Products";
 
-export default function ProductsSection({ filters }) {
+export default function ProductsSection({ filters, isFilterToTop }) {
   const [activeFilter, setActiveFilter] = useState(0);
 
   return (
     <section className="m-auto max-w-[98%]">
       <Filters
-        // isFilterToTop={isFilterToTop}
+        isFilterToTop={isFilterToTop}
         activeFilter={activeFilter}
         setActiveFilter={setActiveFilter}
         filters={filters}
