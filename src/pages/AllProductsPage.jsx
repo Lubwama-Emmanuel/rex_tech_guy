@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import Hero from "../components/Hero";
 import ProductsSection from "../ui/ProductsSection";
@@ -50,8 +49,6 @@ const filters = [
 export default function AllProductsPage() {
   const [isFilterToTop, setIsFilterToTop] = useState(false);
   const data = useLoaderData();
-
-  console.log(data);
 
   useEffect(() => {
     // Function to be handling scrolling event
