@@ -1,3 +1,4 @@
+import { useLoaderData } from "react-router-dom";
 import Hero from "../components/Hero";
 import ProductsSection from "../ui/ProductsSection";
 
@@ -45,10 +46,11 @@ const lenovoLaptops = [
 ];
 
 export default function LenovoLaptops() {
+  const data = useLoaderData();
   return (
     <div>
       <Hero />
-      <ProductsSection filters={lenovoLaptops} />
+      <ProductsSection data={data} filters={lenovoLaptops} />
     </div>
   );
 }
