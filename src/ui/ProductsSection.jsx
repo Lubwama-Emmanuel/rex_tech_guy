@@ -3,7 +3,7 @@ import { useState } from "react";
 import FilterButton from "./FilterButton";
 import Products from "../components/Products";
 
-export default function ProductsSection({ filters, isFilterToTop }) {
+export default function ProductsSection({ filters, isFilterToTop, data }) {
   const [activeFilter, setActiveFilter] = useState(0);
 
   return (
@@ -14,7 +14,7 @@ export default function ProductsSection({ filters, isFilterToTop }) {
         setActiveFilter={setActiveFilter}
         filters={filters}
       />
-      <ProductsList activeFilter={filters[activeFilter].filter} />
+      <ProductsList data={data} activeFilter={filters[activeFilter].filter} />
     </section>
   );
 }
@@ -40,11 +40,10 @@ function Filters({ isFilterToTop, activeFilter, setActiveFilter, filters }) {
   );
 }
 
-function ProductsList({ activeFilter }) {
-  console.log(activeFilter);
+function ProductsList({ activeFilter, data }) {
   return (
     <div className="">
-      <Products filter={activeFilter} />
+      <Products data={data} filter={activeFilter} />
     </div>
   );
 }

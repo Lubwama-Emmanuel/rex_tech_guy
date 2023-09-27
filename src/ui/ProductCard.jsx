@@ -2,8 +2,6 @@
 export default function ProductCard({ laptop, larger = false }) {
   const { name, image } = laptop;
 
-  //
-
   return (
     <div
       className={
