@@ -1,3 +1,4 @@
+import { useLoaderData } from "react-router-dom";
 import Hero from "../components/Hero";
 import ProductsSection from "../ui/ProductsSection";
 
@@ -49,10 +50,11 @@ const DellFilters = [
 ];
 
 export default function DellLaptops() {
+  const data = useLoaderData();
   return (
     <div>
       <Hero />
-      <ProductsSection filters={DellFilters} />
+      <ProductsSection data={data} filters={DellFilters} />
     </div>
   );
 }
