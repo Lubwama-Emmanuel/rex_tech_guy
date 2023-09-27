@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Hero from "../components/Hero";
 import ProductsSection from "../ui/ProductsSection";
+import { useLoaderData } from "react-router-dom";
 
 const filters = [
   {
@@ -48,6 +49,9 @@ const filters = [
 
 export default function AllProductsPage() {
   const [isFilterToTop, setIsFilterToTop] = useState(false);
+  const data = useLoaderData();
+
+  console.log(data);
 
   useEffect(() => {
     // Function to be handling scrolling event
@@ -76,7 +80,11 @@ export default function AllProductsPage() {
       <h2 className="mb-5 text-center text-5xl text-emerald-600">
         Which laptop is right for you?
       </h2>
-      <ProductsSection filters={filters} isFilterToTop={isFilterToTop} />
+      <ProductsSection
+        data={data}
+        filters={filters}
+        isFilterToTop={isFilterToTop}
+      />
     </section>
   );
 }
