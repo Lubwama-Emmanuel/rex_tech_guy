@@ -9,6 +9,7 @@ import AllProductsPage from "./pages/AllProductsPage";
 import DellLaptops from "./pages/DellLaptops";
 import HpLaptops from "./pages/HpLaptops";
 import LenovoLaptops from "./pages/LenovoLaptops";
+import { allLaptops } from "./loaders";
 
 export default function App() {
   // const [isDark, setIsDark] = useState(false);
@@ -28,14 +29,17 @@ export default function App() {
         {
           path: "/products/dell",
           element: <DellLaptops />,
+          loader: () => allLaptops("dell"),
         },
         {
           path: "/products/hp",
           element: <HpLaptops />,
+          loader: () => allLaptops("hp"),
         },
         {
           path: "/products/lenovo",
           element: <LenovoLaptops />,
+          loader: () => allLaptops("lenovo"),
         },
         {
           path: "/services",
@@ -52,6 +56,7 @@ export default function App() {
         {
           path: "/products/allProducts",
           element: <AllProductsPage />,
+          loader: () => allLaptops(),
         },
       ],
     },
