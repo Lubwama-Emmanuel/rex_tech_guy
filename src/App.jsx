@@ -9,7 +9,8 @@ import AllProductsPage from "./pages/AllProductsPage";
 import DellLaptops from "./pages/DellLaptops";
 import HpLaptops from "./pages/HpLaptops";
 import LenovoLaptops from "./pages/LenovoLaptops";
-import { allLaptops } from "./loaders";
+import { allLaptops, getLaptop } from "./loaders";
+import ErrorPage from "./pages/ErrorPage";
 
 export default function App() {
   // const [isDark, setIsDark] = useState(false);
@@ -17,6 +18,7 @@ export default function App() {
   const router = createBrowserRouter([
     {
       element: <AppLayout />,
+      errorElement: <ErrorPage />,
       children: [
         {
           path: "/",
@@ -50,8 +52,12 @@ export default function App() {
           element: <Contact />,
         },
         {
-          path: "/products/gaming/omen",
+          path: "/products/:productId",
           element: <ProductPage />,
+          loader: ({ params }) => {
+            console.log(params);
+            return getLaptop(params.productId);
+          },
         },
         {
           path: "/products/allProducts",
