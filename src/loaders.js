@@ -24,3 +24,18 @@ export async function allLaptops(brand = "all") {
     return;
   }
 }
+
+export async function getLaptop(id) {
+  try {
+    const res = await axios.get(
+      `${productionBaseUrl}/api/v1/laptops/getLaptop/${id}`,
+    );
+
+    const laptop = res.data.laptop;
+
+    return laptop;
+  } catch (error) {
+    console.log(error);
+    return;
+  }
+}
