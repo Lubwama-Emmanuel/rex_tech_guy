@@ -5,8 +5,6 @@ import Logo from "./Logo";
 export default function MobileHeader({ showMenu, setShowMenu }) {
   const [isSearch, setisSearch] = useState(false);
 
-  console.log(showMenu);
-
   function HandleToggleSearch() {
     setisSearch((value) => !value);
   }
