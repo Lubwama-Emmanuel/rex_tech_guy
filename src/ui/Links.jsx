@@ -98,7 +98,7 @@ function Link({ el, showDropdown, handleHideDropdown, handleShowDropdown }) {
 function DropDown({ items }) {
   return (
     <div>
-      <ul className="absolute bg-white">
+      <ul className="absolute bg-red-900">
         {items.map((el) => (
           <li key={el.id}>
             <NavLink to={el.link} className="focus:text-emerald-500">
