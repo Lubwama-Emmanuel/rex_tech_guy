@@ -14,6 +14,7 @@ export default function AppLayout() {
 
       <Header setShowMenu={setShowMenu} />
 
+      {/* toggle header depending on device size */}
       <MobileHeader showMenu={showMenu} setShowMenu={setShowMenu} />
 
       <main>
