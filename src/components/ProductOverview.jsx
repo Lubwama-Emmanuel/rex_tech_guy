@@ -2,6 +2,7 @@
 /* eslint-disable no-irregular-whitespace */
 import { useState } from "react";
 import Button from "../ui/Button";
+import ProductReview from "../ui/ProductReview";
 
 // const data = [
 //   {
@@ -32,6 +33,7 @@ export default function ProductOverview({ laptop }) {
 
   const [activeImage, setActiveImage] = useState(data[0]);
   const [activeContainer, setActiveContainer] = useState(0);
+  const [addReview, setAddReview] = useState(true);
 
   // function moveContainer() {
   //   if (activeContainer === 3) {
@@ -82,6 +84,18 @@ export default function ProductOverview({ laptop }) {
         <div className="space-x-3">
           <Button>add to cart</Button>
           <Button>shop</Button>
+        </div>
+        <div className="mt-4">
+          <h3>Bought this product before?</h3>
+          {!addReview && (
+            <button
+              onClick={() => setAddReview(true)}
+              className="shawdow-emerald-500/50 rounded-full border border-emerald-400  px-4 pb-1 pt-2 font-bold uppercase leading-none text-emerald-800 shadow-lg transition-all duration-200 hover:scale-105 sm:text-xl"
+            >
+              Add Review
+            </button>
+          )}
+          {addReview && <ProductReview setAddReview={setAddReview} />}
         </div>
       </div>
     </div>

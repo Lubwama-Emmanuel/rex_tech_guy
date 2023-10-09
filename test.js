@@ -1,16 +1,10 @@
-import axios from "axios";
+function minMaxSum(arr) {
+  arr = arr.sort();
 
-async function testEndpoint() {
-  try {
-    const response = await axios.get(
-      "https://rex-tech-guy.onrender.com/api/v1/laptops/getLaptops",
-      //   "http://127.0.0.1:9000/api/v1/laptops/getLaptops",
-    );
+  const min = arr.slice(0, 4).reduce((a, c) => a + c);
+  const max = arr.slice(-4);
 
-    console.log(response.data.data);
-  } catch (error) {
-    console.log("An erorr occured", error);
-  }
+  console.log(min, max);
 }
 
-testEndpoint();
+minMaxSum([1, 2, 3, 5, 4]);

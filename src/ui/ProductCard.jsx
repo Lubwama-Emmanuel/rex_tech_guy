@@ -20,7 +20,7 @@ export default function ProductCard({ laptop, larger = false }) {
       <div className="">
         <h3 className="sm:text-md text-center text-sm uppercase">{name}</h3>
         <h3 className="text-sm">Ugx 3,000,000</h3>
-        {/* <Link to={`/products/${id}`}>To</Link> */}
+        <Link to={`/products/${id}`}>To</Link>
       </div>
     </div>
   );
