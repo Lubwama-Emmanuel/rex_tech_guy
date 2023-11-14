@@ -1,4 +1,4 @@
-import { Link, Navigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 /* eslint-disable react/prop-types */
 export default function ProductCard({ laptop, larger = false }) {
@@ -12,7 +12,7 @@ export default function ProductCard({ laptop, larger = false }) {
           ? `flex items-center sm:hover:scale-110`
           : `flex flex-col items-center sm:hover:scale-110`
       }
-      onClick={() => <Navigate to="/products/60" />}
+      onClick={() => <Navigate to={`/products/${id}`} />}
     >
       <div className="flex items-center justify-center">
         <img src={mainImage} className="w-32 sm:w-64" />
