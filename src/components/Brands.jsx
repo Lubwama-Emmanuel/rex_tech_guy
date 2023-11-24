@@ -1,6 +1,6 @@
 export default function Brands() {
   return (
-    <section className="mb-20  text-center">
+    <section className=" m-10 text-center">
       <h3 className="mb-5 text-2xl">Supported brands</h3>
       <div className=" flex items-center justify-center space-x-10">
         <img
