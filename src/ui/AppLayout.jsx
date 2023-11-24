@@ -9,7 +9,7 @@ export default function AppLayout() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <div className="m-auto max-w-screen-2xl">
+    <div className="m-auto ">
       {showMenu && <MobileMenu setShowMenu={setShowMenu} />}
 
       <Header setShowMenu={setShowMenu} />
