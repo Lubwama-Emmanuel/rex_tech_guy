@@ -27,7 +27,7 @@ export default function Slider({ laptop }) {
     return () => clearInterval(interval);
   });
   return (
-    <div className="m-auto mt-10 max-w-[95%]">
+    <div className="m-auto mt-10 max-w-[95%] ">
       <div className="grid py-5 sm:grid-cols-2 sm:py-10">
         <div className=" order-last flex flex-col items-start justify-center space-y-2 px-5 py-2 sm:space-y-3 sm:px-1">
           <h3 className="text-sm font-light uppercase tracking-widest">
