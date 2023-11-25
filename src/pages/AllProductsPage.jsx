@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import ProductsSection from "../ui/ProductsSection";
 import { useLoaderData } from "react-router-dom";
 
+// Test filters
 const filters = [
   {
     id: 0,
