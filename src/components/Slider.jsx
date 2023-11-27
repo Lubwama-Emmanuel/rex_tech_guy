@@ -26,6 +26,7 @@ export default function Slider({ laptop }) {
 
     return () => clearInterval(interval);
   });
+
   return (
     <div className="m-auto mt-10 max-w-[95%] ">
       <div className="grid py-5 sm:grid-cols-2 sm:py-10">
