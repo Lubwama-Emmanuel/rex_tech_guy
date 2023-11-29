@@ -29,6 +29,7 @@ const data = [
   },
 ];
 
+// Designers component
 export default function Designers() {
   return (
     <section className="m-auto mb-20 w-[95%]">
